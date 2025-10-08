@@ -1,36 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pipex.h                                            :+:      :+:    :+:   */
+/*   ft_exec.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: phofer <phofer@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/30 16:17:07 by phofer            #+#    #+#             */
-/*   Updated: 2025/10/08 15:47:21 by phofer           ###   ########.fr       */
+/*   Created: 2025/10/08 15:45:07 by phofer            #+#    #+#             */
+/*   Updated: 2025/10/08 15:45:10 by phofer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PIPEX_H
-# define PIPEX_H
-
-# include "ft_printf.h"
-# include "libft.h"
-# include <stdbool.h>
-
-typedef enum e_bool
+ft_exec()
 {
-	false,
-	true
-}			t_bool;
-
-typedef struct s_pipex
-{
-	int		in_fd;
-	int		out_fd;
-	t_bool	here_doc;
-	char	**cmd_paths;
-	char	***cmd_args;
-	int		cmd_count;
-}			t_pipex;
-
-#endif
+    pipe()
+    fork()
+    if (child)
+    {
+        dup2()
+        execve()
+    }
+    else
+    {
+        dup2()
+        waitpid()
+    }
+}
