@@ -6,22 +6,8 @@
 /*   By: phofer <phofer@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 15:45:07 by phofer            #+#    #+#             */
-/*   Updated: 2025/10/08 15:45:10 by phofer           ###   ########.fr       */
+/*   Updated: 2025/10/19 12:21:33 by phofer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-ft_exec()
-{
-    pipe()
-    fork()
-    if (child)
-    {
-        dup2()
-        execve()
-    }
-    else
-    {
-        dup2()
-        waitpid()
-    }
-}
+

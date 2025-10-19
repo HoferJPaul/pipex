@@ -6,7 +6,7 @@
 /*   By: phofer <phofer@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/30 16:17:07 by phofer            #+#    #+#             */
-/*   Updated: 2025/10/08 15:47:21 by phofer           ###   ########.fr       */
+/*   Updated: 2025/10/19 11:56:57 by phofer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,21 +16,20 @@
 # include "ft_printf.h"
 # include "libft.h"
 # include <stdbool.h>
+# include <sys/types.h>
+# include <sys/wait.h>
+# include <sys/stat.h>
+# include <fcntl.h>
+# include <stdlib.h>
+# include <unistd.h>
+# include <stdio.h>
 
-typedef enum e_bool
-{
-	false,
-	true
-}			t_bool;
 
 typedef struct s_pipex
 {
-	int		in_fd;
-	int		out_fd;
-	t_bool	here_doc;
-	char	**cmd_paths;
-	char	***cmd_args;
-	int		cmd_count;
-}			t_pipex;
+	int		pipefd[2];
+	pid_t	pid1;
+	pid_t	pid2;
+}	t_pipex;
 
 #endif
