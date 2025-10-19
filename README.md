@@ -64,11 +64,10 @@ Will behave like:
 pipex/
 ├── pipex.h           # Header file with function prototypes and includes
 ├── main.c            # Entry point
-├── pipex.c           # Main logic for pipes, processes, redirection
-├── cmd_utils.c       # Path resolution, command parsing
-├── error.c           # Error handling and messaging
+├── utils.c           # Main logic for pipes, processes, redirection
+├── path.c            # Path resolution, command parsing
 ├── Makefile
-└── libft/            # Your libft folder (if used)
+└── libft/            # Your libft folder
 ```
 
 ---
