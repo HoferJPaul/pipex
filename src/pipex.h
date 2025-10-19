@@ -6,7 +6,7 @@
 /*   By: phofer <phofer@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/30 16:17:07 by phofer            #+#    #+#             */
-/*   Updated: 2025/10/19 11:56:57 by phofer           ###   ########.fr       */
+/*   Updated: 2025/10/19 13:57:40 by phofer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,16 @@
 # include <unistd.h>
 # include <stdio.h>
 
-
 typedef struct s_pipex
 {
 	int		pipefd[2];
 	pid_t	pid1;
 	pid_t	pid2;
 }	t_pipex;
+
+char	*get_path(char *cmd, char **env);
+int		open_file(char *file, int in_or_out);
+void	ft_free_tab(char **tab);
+char	*ft_getenvp(char *name, char **envp);
 
 #endif

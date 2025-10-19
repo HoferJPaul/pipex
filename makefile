@@ -6,7 +6,7 @@
 #    By: phofer <phofer@student.42prague.com>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/09/30 16:14:59 by phofer            #+#    #+#              #
-#    Updated: 2025/10/19 12:47:13 by phofer           ###   ########.fr        #
+#    Updated: 2025/10/19 13:58:13 by phofer           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ LIBFT_DIR	= include/libft
 PRINTF_DIR	= include/printf
 
 # Files
-SRC_FILES	= main.c
+SRC_FILES	= main.c utils.c path.c
 
 SRC			= $(addprefix $(SRC_DIR)/, $(SRC_FILES))
 OBJ			= $(addprefix $(OBJ_DIR)/, $(SRC_FILES:.c=.o))
