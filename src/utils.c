@@ -6,7 +6,7 @@
 /*   By: phofer <phofer@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 15:45:07 by phofer            #+#    #+#             */
-/*   Updated: 2025/10/19 13:52:55 by phofer           ###   ########.fr       */
+/*   Updated: 2025/10/19 14:26:10 by phofer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,10 @@ int	open_file(char *file, int in_or_out)
 	else if (in_or_out == 1)
 		fd = open(file, O_WRONLY | O_CREAT | O_TRUNC, 0644);
 	else
-		exit(1);
+		return (-1);
 	if (fd == -1)
 	{
 		perror(file);
-		exit(1);
 	}
 	return (fd);
 }
